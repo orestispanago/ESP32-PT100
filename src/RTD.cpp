@@ -15,10 +15,10 @@ RTD::RTD(RTDType rtdType, numWires wires, int pin)
         _rNominal = 1000.0;
         break;
     }
-    begin();
+    _begin();
 }
 
-void RTD::begin()
+void RTD::_begin()
 {
     switch (_wires)
     {
@@ -33,7 +33,7 @@ void RTD::begin()
         break;
     }
 }
-float RTD::value()
+float RTD::temperature()
 {
     return _max31865->temperature(_rNominal, _rRef);
 }

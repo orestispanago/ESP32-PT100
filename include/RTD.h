@@ -19,15 +19,15 @@ enum numWires
 class RTD
 {
 public:
-    Adafruit_MAX31865 *_max31865;
     RTD(RTDType rtdType, numWires wires, int pin);
-    void begin();
-    float value();
+    float temperature();
 
 private:
+    Adafruit_MAX31865 *_max31865;
     float _rRef;
     float _rNominal;
     numWires _wires;
+    void _begin();
 };
 
 #endif

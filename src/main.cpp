@@ -15,8 +15,8 @@ void setup()
 void loop()
 {
   Serial.print("temp1 = ");
-  Serial.println(pt1.value());
+  Serial.println(pt1.temperature());
   Serial.print("temp2 = ");
-  Serial.println(pt2.value());
+  Serial.println(pt2.temperature());
   delay(1000);
 }
